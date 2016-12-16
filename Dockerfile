@@ -7,7 +7,7 @@ VOLUME /etc/dnsmasq.d
 
 RUN apk --no-cache add dnsmasq
 
-CMD ["dnsmasq", "--keep-in-foreground", "--conf-dir=/etc/dnsmasq.d", "--log-facility=-"]
+CMD ["dnsmasq", "--keep-in-foreground", "--conf-dir=/etc/dnsmasq.d/,*.conf", "--log-facility=-"]
 
 EXPOSE 53/tcp
 EXPOSE 53/udp
